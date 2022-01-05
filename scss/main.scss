@@ -1,3 +1,9 @@
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -95,16 +101,6 @@ img {
 }
 
 
-
-
-
-:root {
-	--primary-color: #e50914;
-	--dark-color: #141414;
-	--light-color: #f4f4f4;
-}
-
-
 .showcase{
     width: 100%;
     height: 75vh;
@@ -170,26 +166,13 @@ img {
 
                    
                 }
-                 &::before{
-                        content:'O';
-                        font-size: .75rem;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: .5rem;
-                        position: absolute;
-                    }
-                    &::after{
-                        content:'O';
-                        font-size: .75rem;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        right: 1.5rem;
-                        position: absolute;
-                    }
+                 
+                    
             }
         }
     }
     .cvc{
+        
         position: absolute;
         z-index: 2;
         top: 55%;
@@ -314,28 +297,6 @@ input:focus::placeholder{
 transform: translateY(-16px);
 }
 
-//the showcase area is finished.check your resoponsive side 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .tabs{
     background: var(--dark-color);
     padding-top: 1rem;
@@ -376,8 +337,6 @@ transform: translateY(-16px);
 
     
 }
-
-
 
 
 
@@ -511,10 +470,6 @@ transform: translateY(-16px);
 
 }
 
-
-
-
-
 .help-questions{
 
     .container{
@@ -528,7 +483,7 @@ transform: translateY(-16px);
         margin: 2em auto;
         
         li{
-            
+            outline: none;
             button{
                 
                 width: 100%;
@@ -547,10 +502,13 @@ transform: translateY(-16px);
 
             .answer{
                 background: #303030;
-                padding: 31px;
                 font-size: 24px;
                 color: #fff;
                 margin-bottom: 8px;
+                overflow:hidden;
+                transition:  .25s cubic-bezier(.5,0,.1,1);
+                opacity: 0;
+                height:0;
                 
             }
             
@@ -626,25 +584,24 @@ transform: translateY(-16px);
         
     }
 }
+.help-questions{
+    .ans{
+        .answer{
+            background: #303030;
+                padding: 31px;
+                font-size: 24px;
+                color: #fff;
+                margin-bottom: 8px;
+                opacity: 1;
+                height: auto;
+                
+        }
 
-
-
-
-//btn edit(close-open)
-.i-open{
-    i{
-       transform: rotate(45deg);
-       
+        i{
+            transform: rotate(45deg);
+        }
     }
-    
 }
-.closed{
-    display: none;
-    
-}
-
-
-
 
 
 
@@ -723,5 +680,7 @@ transform: translateY(-16px);
 }
 
 }
+
+
 
 
